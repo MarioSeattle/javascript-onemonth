@@ -4,15 +4,15 @@
 		<title>Oprah Likes You. And so do other people.</title>
 
 		<style>
-			
-			/* Basic CSS comment */	
+
+			/* Basic CSS comment */
 			body {
-				background: #BBB;
+				background: grey;
 				color: white;
 				width: 960px;
 				margin: 0 auto;
-				font-size: 40px;
-				color: black; 
+				font-size: 30px;
+				color: black;
 			}
 
 			h1 {
@@ -23,23 +23,24 @@
 		</style>
 
 		<script>
+			/* this is an event */
+			/* alert("I'm annoying"); */
 
-			/*alert("Que Aburrido...");*/
-
-			/* Un poco aburrido */
 			var username = prompt("Hello, who are you?");
 
-			document.write("<h1>Hello " + username + "!</h1>");
-
+			if(username==="Chris") {
+				document.write("<h1>Hello " + username + " you won a car!</h1>");
+			}
+			else {
+				document.write("<h1>Hello " + username + "!");
+			}
 
 		</script>
 
-
 	</head>
- 	
+
 	<body>
 
 	</body>
 
 </html>
-
