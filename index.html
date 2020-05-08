@@ -3,6 +3,7 @@
 	<head>
 		<title>Oprah Likes You. And so do other people.</title>
 
+		
 		<style>
 
 			/* Basic CSS comment */
@@ -28,11 +29,17 @@
 
 			var username = prompt("Hello, who are you?");
 
-			if(username==="Chris") {
-				document.write("<h1>Hello " + username + " you won a car!</h1>");
+			var car = new Array("BMW", "Saab", "fiat");
+
+			if(username==="mario") {
+
+				document.write("<h1>Hello " + username + " you won a " + car[1] + "!</h1>");
+
 			}
+
 			else {
-				document.write("<h1>Hello " + username + "!");
+
+				document.write("<h1>Hello " + username + " you won a " + car[2] + "!</h1>");
 			}
 
 		</script>
@@ -40,7 +47,7 @@
 	</head>
 
 	<body>
-
+		<img src="oprah.jpg" alt="Oprah">
 	</body>
 
 </html>
