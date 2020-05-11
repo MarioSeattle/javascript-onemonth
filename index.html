@@ -26,30 +26,37 @@
 		<script>
 			/* this is an event */
 			/* alert("I'm annoying"); */
+function insertImg(src, alt) {
+      let img = document.createElement('img');
+      img.src = src;
+      img.alt = alt;
+      document.body.appendChild(img);
+    }
 
-			var username = prompt("Hello, who are you?");
+    var usersCars = {
+      "mario": {
+        car: 'BMW',
+        src: "bmw.jpg",
+        alt: "BMW"
+      },
+      "julio": {
+        car: 'Tesla',
+        src: "tesla.jpg",
+        alt: "Nic Tesla"
+      }
+    }
 
-			var car = new Array("BMW", "Tesla", "fiat");
-			console.log(car);
+    var username = prompt("Hello, who are you?");
 
-
-			if(username==="mario") {
-
-				document.write("<h1>Hello " + username + " you won a " + car[0] + "!</h1>");
-
-			}
-
-			else if(username==="julio") {
-
-				document.write("<h1>Hello " + username + " you won a " + car[1] + "!</h1>");
-
-			}
-
-
-			else{
-
-				document.write("<h1>Hello " + username + " You didn't win a car!</h1>");
-			}
+    if (usersCars[username]) {
+      // the username was recognized
+      document.write("<h1>Hello " + username + " you won a " + usersCars[username].car + "!</h1>");
+      insertImg(usersCars[username].src, usersCars[username].alt);
+    } else {
+      // no such username
+      document.write("<h1>Hello " + username + " You didn't win a car!</h1>");
+      insertImg('fiat.jpg', 'Oh, what a shame!');
+    }
 
 
 
